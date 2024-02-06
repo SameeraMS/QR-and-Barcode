@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="777.0" prefWidth="786.0" style="-fx-background-color: #e9ecef;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.ahms.controller.barcode.BarcodeReadController">
+   <children>
+      <AnchorPane fx:id="minipane" layoutX="71.0" layoutY="77.0" prefHeight="480.0" prefWidth="640.0" style="-fx-background-color: #ffffff; -fx-background-radius: 15px;">
+         <children>
+            <ImageView fx:id="imageView" fitHeight="432.0" fitWidth="589.0" layoutX="24.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <ProgressBar fx:id="progress" layoutX="147.0" layoutY="575.0" prefHeight="23.0" prefWidth="478.0" progress="0.0" />
+      <JFXButton fx:id="btnStop" layoutX="490.0" layoutY="711.0" onAction="#stopBtnOnAction" prefHeight="45.0" prefWidth="125.0" style="-fx-background-color: #3081D0; -fx-background-radius: 10px;" text="Stop" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnStart" layoutX="155.0" layoutY="710.0" onAction="#startBtnOnAction" prefHeight="45.0" prefWidth="125.0" style="-fx-background-color: #3081D0; -fx-background-radius: 10px;" text="Start" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="223.0" layoutY="636.0" prefHeight="34.0" prefWidth="99.0" text="Medicine Id :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXTextArea fx:id="txtArea" layoutX="343.0" layoutY="627.0" prefHeight="34.0" prefWidth="282.0" />
+      <Label layoutX="264.0" layoutY="28.0" text="BARCODE READER">
+         <font>
+            <Font name="Times New Roman Bold" size="27.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
