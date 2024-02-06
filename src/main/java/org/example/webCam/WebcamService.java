@@ -7,7 +7,7 @@ import javafx.concurrent.Service;
 import javafx.concurrent.Task;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.image.Image;
-import lk.ijse.ahms.barcode.Barcode;
+import org.example.barcode.Barcode;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;

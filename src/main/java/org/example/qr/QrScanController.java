@@ -22,9 +22,7 @@ import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import lk.ijse.ahms.controller.dashboard.AppointmentFormController;
-import lk.ijse.ahms.controller.dashboard.PaymentFormController;
-import lombok.Setter;
+
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -58,11 +56,6 @@ public class QrScanController {
     @FXML
     private AnchorPane mainPane;
 
-    @Setter
-    private PaymentFormController paymentFormController;
-
-    @Setter
-    private AppointmentFormController appointmentFormController;
 
 
 
@@ -134,20 +127,6 @@ public class QrScanController {
                                 String id = result.getText();
                                 System.out.println(id);
 
-                                if(paymentFormController != null) {
-                                    paymentFormController.cmbAppId.setValue(id);
-                                    paymentFormController.appointmentIdOnAction(id);
-                                } else {
-                                    appointmentFormController.txtAppointId.setText(id);
-                                    appointmentFormController.searchOnAction(new ActionEvent());
-
-                                }
-
-
-
-
-
-
 
                                 new Alert(Alert.AlertType.INFORMATION, "Data Scanned Successfully!").showAndWait();
                             } else {
@@ -170,11 +149,6 @@ public class QrScanController {
             stopWebcam();
 
     }
-
-
-
-
-
 
 
     public void btnOnBack(ActionEvent actionEvent) throws IOException {

@@ -13,7 +13,7 @@ public class Launcher extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent load = FXMLLoader.load(getClass().getResource("/view/Calender.fxml"));
+        Parent load = FXMLLoader.load(getClass().getResource("/view/welcomePage.fxml"));
         Scene scene = new Scene(load);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Calendar");
