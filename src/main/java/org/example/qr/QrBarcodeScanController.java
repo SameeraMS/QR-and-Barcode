@@ -16,7 +16,6 @@ import javafx.application.Platform;
 import javafx.embed.swing.SwingNode;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
@@ -27,9 +26,8 @@ import javafx.scene.layout.AnchorPane;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.IOException;
 
-public class QrScanController {
+public class QrBarcodeScanController {
     @FXML
     private JFXButton btnBack;
 
@@ -135,7 +133,6 @@ public class QrScanController {
                         });
                     }
                 } catch (NotFoundException | InterruptedException | RuntimeException ignored) {
-                    // ignored
                 }
             }
         });
@@ -148,11 +145,5 @@ public class QrScanController {
     public void stopBtnOnAction(ActionEvent actionEvent) {
             stopWebcam();
 
-    }
-
-
-    public void btnOnBack(ActionEvent actionEvent) throws IOException {
-        mainPane.getChildren().clear();
-        mainPane.getChildren().add(FXMLLoader.load(getClass().getResource("/view/markAttendanceForm.fxml")));
     }
 }

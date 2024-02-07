@@ -14,14 +14,15 @@ public class welcomePageController {
     }
 
     public void QrReaderOnAction(ActionEvent actionEvent) throws IOException {
-        viewForm("/view/qr/QrScanForm.fxml");
+        viewForm("/view/qr/QrBarcodeScanForm.fxml");
     }
 
-    public void BarcodeGeneratorOnAction(ActionEvent actionEvent) {
+    public void BarcodeGeneratorOnAction(ActionEvent actionEvent) throws IOException {
+        viewForm("/view/barcodeReader/BarcodeGenerator.fxml");
     }
 
     public void BarcodeReaderOnAction(ActionEvent actionEvent) throws IOException {
-        viewForm("/view/barcodeReader/BarcodeRead.fxml");
+        viewForm("/view/qr/QrBarcodeScanForm.fxml");
     }
 
     public void viewForm(String form) throws IOException {

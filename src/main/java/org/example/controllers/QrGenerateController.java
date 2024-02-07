@@ -20,8 +20,13 @@ public class QrGenerateController {
 
     public void GenerateQrOnAction(ActionEvent actionEvent) throws WriterException {
         String text = txtText.getText();
-        BufferedImage bufferedImage = QRGenerator.generateQrCode(text, 1250, 1250);
-        image.setImage(SwingFXUtils.toFXImage(bufferedImage, null));
+        if (text.isEmpty()) {
+            new Alert(Alert.AlertType.ERROR, "Please enter text").show();
+        } else {
+            BufferedImage bufferedImage = QRGenerator.generateQrCode(text, 1250, 1250);
+            image.setImage(SwingFXUtils.toFXImage(bufferedImage, null));
+        }
+
     }
 
     public void QrsaveOnAction(ActionEvent actionEvent) throws WriterException {
