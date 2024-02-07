@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class welcomePageController {
     public void QrGeneratorOnAction(ActionEvent actionEvent) throws IOException {
-        viewForm("");
+        viewForm("/view/qr/QrGenerate.fxml");
     }
 
     public void QrReaderOnAction(ActionEvent actionEvent) throws IOException {

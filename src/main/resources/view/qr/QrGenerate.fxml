@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="481.0" prefWidth="505.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.QrGenerateController">
+   <children>
+      <Label layoutX="152.0" layoutY="27.0" text="QR GENERATOR">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtText" layoutX="60.0" layoutY="103.0" prefHeight="27.0" prefWidth="385.0" promptText="Type Here.." />
+      <JFXButton buttonType="RAISED" layoutX="218.0" layoutY="159.0" onAction="#GenerateQrOnAction" text="Generate">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fx:id="image" fitHeight="170.0" fitWidth="203.0" layoutX="157.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="txtLocation" layoutX="60.0" layoutY="388.0" prefHeight="27.0" prefWidth="288.0" promptText="Location to Save" />
+      <JFXButton buttonType="RAISED" layoutX="230.0" layoutY="426.0" onAction="#QrsaveOnAction" text="Save">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="366.0" layoutY="388.0" onAction="#LocationOnAction" text="Loc">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>
