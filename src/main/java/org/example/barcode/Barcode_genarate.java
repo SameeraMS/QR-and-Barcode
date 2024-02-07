@@ -26,13 +26,15 @@ public class Barcode_genarate {
             canvas.finish();
 
             //write to png file
-            FileOutputStream fos = new FileOutputStream("/Users/sameeramadushan/Documents/final project/barcodes/"+image_name);
+            String path = "/Users/sameeramadushan/Documents/final project/barcodes/"+image_name;
+
+            FileOutputStream fos = new FileOutputStream(path);
             fos.write(baos.toByteArray());
 
 
-            BufferedImage read = ImageIO.read(new FileInputStream("/Users/sameeramadushan/Documents/final project/barcodes/"+image_name));
+            BufferedImage read = ImageIO.read(new FileInputStream(path));
             img=read;
-            FileInputStream fileInputStream = new FileInputStream("/Users/sameeramadushan/Documents/final project/barcodes/"+image_name);
+            FileInputStream fileInputStream = new FileInputStream(path);
             image=new Image(fileInputStream);
             String s = Barcode.barcodeRead(read);
             System.out.println(s+"       --okay");

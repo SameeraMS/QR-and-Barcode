@@ -5,35 +5,64 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="481.0" prefWidth="505.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.QrGenerateController">
+<AnchorPane prefHeight="410.0" prefWidth="435.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.QrGenerateController">
    <children>
-      <Label layoutX="152.0" layoutY="27.0" text="QR GENERATOR">
+      <ImageView fitHeight="410.0" fitWidth="444.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../asserts/image/comb.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="61.0" layoutY="23.0" text="QRCODE GENERATOR">
          <font>
-            <Font name="System Bold" size="26.0" />
+            <Font name="Arial Black" size="26.0" />
          </font>
       </Label>
-      <JFXTextField fx:id="txtText" layoutX="60.0" layoutY="103.0" prefHeight="27.0" prefWidth="385.0" promptText="Type Here.." />
-      <JFXButton buttonType="RAISED" layoutX="218.0" layoutY="159.0" onAction="#GenerateQrOnAction" text="Generate">
+      <AnchorPane layoutX="19.0" layoutY="93.0" opacity="0.55" prefHeight="49.0" prefWidth="391.0" style="-fx-background-color: white; -fx-background-radius: 10;" />
+      <JFXTextField fx:id="txtText" alignment="CENTER" layoutX="22.0" layoutY="103.0" prefHeight="27.0" prefWidth="385.0" promptText="Type Here..">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font></JFXTextField>
+      <JFXButton buttonType="RAISED" layoutX="180.0" layoutY="159.0" onAction="#GenerateQrOnAction" style="-fx-background-color: #8f4c00; -fx-background-radius: 5;" text="Generate" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
       </JFXButton>
-      <ImageView fx:id="image" fitHeight="170.0" fitWidth="203.0" layoutX="157.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true" />
-      <TextField fx:id="txtLocation" layoutX="60.0" layoutY="388.0" prefHeight="27.0" prefWidth="288.0" promptText="Location to Save" />
-      <JFXButton buttonType="RAISED" layoutX="230.0" layoutY="426.0" onAction="#QrsaveOnAction" text="Save">
+      <TextField fx:id="txtLocation" layoutX="40.0" layoutY="310.0" prefHeight="27.0" prefWidth="288.0" promptText="Location to Save" />
+      <JFXButton buttonType="RAISED" layoutX="192.0" layoutY="348.0" onAction="#QrsaveOnAction" style="-fx-background-color: #8f4c00; -fx-background-radius: 5;" text="Save" textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="366.0" layoutY="388.0" onAction="#LocationOnAction" text="Loc">
+      <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="346.0" layoutY="310.0" onAction="#LocationOnAction" style="-fx-background-color: #8f4c00; -fx-background-radius: 5;" text=" " textFill="WHITE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../asserts/icons/save.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </JFXButton>
+      <AnchorPane layoutX="145.0" layoutY="194.0" prefHeight="102.0" prefWidth="138.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+         <children>
+            <ImageView fx:id="image" fitHeight="88.0" fitWidth="107.0" layoutX="18.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>
