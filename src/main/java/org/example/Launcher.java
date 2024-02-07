@@ -16,7 +16,6 @@ public class Launcher extends Application {
         Parent load = FXMLLoader.load(getClass().getResource("/view/welcomePage.fxml"));
         Scene scene = new Scene(load);
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Calendar");
         primaryStage.centerOnScreen();
         primaryStage.show();
 
